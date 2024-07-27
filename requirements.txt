@@ -1,0 +1,13 @@
+certifi==2024.7.4
+cffi==1.16.0
+charset-normalizer==3.3.2
+colorama==0.4.6
+curl_cffi==0.7.1
+idna==3.7
+markdown-it-py==3.0.0
+mdurl==0.1.2
+pycparser==2.22
+Pygments==2.18.0
+requests==2.32.3
+rich==13.7.1
+urllib3==2.2.2
