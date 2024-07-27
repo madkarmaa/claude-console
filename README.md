@@ -17,7 +17,7 @@ cd claude-console
 pip install -r requirements.txt
 ```
 
-> [!TIP]
+> [!NOTE]
 >
 > The command (`claude_console`) installation is not required but recommended. You can run the installation script like so:
 >
