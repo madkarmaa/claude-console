@@ -61,7 +61,10 @@ After the command is executed, the history of the response **cannot** be accesse
 
 > [!TIP]
 >
+> **COMMAND LINE ARGUMENTS**
+>
 > Use `--open` (or `-o`, `--web`) to open the conversation in your default web browser.
+> Use `--delete-all` (or `-da`) to delete all the conversations on your account.
 
 ![prompt](./images/prompt.png)
 
