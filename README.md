@@ -97,3 +97,9 @@ Exits the program.
 **Aliases**: `web`, `open`, `o`
 
 Continue the chat in your default web browser.
+
+### copy
+
+**Aliases**: `copy`, `cp`
+
+Copy the previous response to the cliboard.
