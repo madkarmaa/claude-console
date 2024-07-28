@@ -65,6 +65,7 @@ After the command is executed, the history of the response **cannot** be accesse
 >
 > Use `--open` (or `-o`, `--web`) to open the conversation in your default web browser.
 > Use `--delete-all` (or `-da`) to delete all the conversations on your account.
+> Use `--delete` (or `-d`) to delete the conversation after getting the response.
 
 ![prompt](./images/prompt.png)
 
