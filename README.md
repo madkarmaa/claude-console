@@ -103,3 +103,9 @@ Continue the chat in your default web browser.
 **Aliases**: `copy`, `cp`
 
 Copy the previous response to the cliboard.
+
+### delete
+
+**Aliases**: `delete`, `del`, `remove`, `rm`
+
+Delete the current conversation and exit the program.
