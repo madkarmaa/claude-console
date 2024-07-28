@@ -82,6 +82,13 @@ while True:
             copy_to_clipboard(response)
             continue
 
+        elif command in ['del', 'delete', 'remove', 'rm']:
+            if client.delete_conversation(uuid):
+                print(f'{Fore.GREEN}Successfully deleted the current conversation! Exiting...{Style.RESET_ALL}')
+            else:
+                print(f'{Fore.RED}Could not delete the current conversation! Aborting...{Style.RESET_ALL}')
+            break
+
         else:
             pass
 
