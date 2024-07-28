@@ -59,7 +59,7 @@ claude_console "<prompt>" <OPTIONS>
 
 After the command is executed, the history of the response **cannot** be accessed by the AI anymore.
 
-> [!TIP]
+> [!NOTE]
 >
 > **COMMAND LINE ARGUMENTS**
 >
