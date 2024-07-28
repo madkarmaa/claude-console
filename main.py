@@ -20,9 +20,18 @@ console = Console()
 client = Client()
 
 parser.add_argument('-o', '--open', '--web', action = 'store_true', help = 'Open the conversation in your default web browser', required = False)
+parser.add_argument('-da', '--delete-all', action = 'store_true', help = 'Delete all conversations on your account', required = False)
 
 args, remainder = parser.parse_known_args()
 args = vars(args)
+
+if args['delete_all']:
+    if client.delete_all_conversations():
+        print(f'{Fore.GREEN}Successfully deleted all conversations on your account!{Style.RESET_ALL}')
+        sys.exit(0)
+    else:
+        print(f'{Fore.RED}Could not delete some conversations!{Style.RESET_ALL}')
+        sys.exit(1)
 
 cli_prompt = remainder[0] if remainder else None
 uuid: str = client.create_new_chat()['uuid']
