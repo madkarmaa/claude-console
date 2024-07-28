@@ -22,6 +22,7 @@ client = Client()
 
 parser.add_argument('-o', '--open', '--web', action = 'store_true', help = 'Open the conversation in your default web browser', required = False)
 parser.add_argument('-da', '--delete-all', action = 'store_true', help = 'Delete all conversations on your account', required = False)
+parser.add_argument('-d', '--delete', action = 'store_true', help = 'Delete the conversation after getting the response', required = False)
 
 args, remainder = parser.parse_known_args()
 args = vars(args)
@@ -56,7 +57,9 @@ if cli_prompt:
     console.print(Markdown(f'{response}'))
     print()
 
-    # client.delete_conversation(uuid)
+    if args['delete']:
+        client.delete_conversation(uuid)
+
     sys.exit(0)
 
 print()
