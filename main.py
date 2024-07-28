@@ -4,6 +4,7 @@ from argparse import ArgumentParser
 from lib.client import Client
 from lib.utils import check_for_updates
 from colorama import Fore, Style
+from pyperclip import copy as copy_to_clipboard
 # https://stackoverflow.com/a/76833666
 from rich.console import Console
 from rich.markdown import Markdown
@@ -35,6 +36,7 @@ if args['delete_all']:
 
 cli_prompt = remainder[0] if remainder else None
 uuid: str = client.create_new_chat()['uuid']
+response: str = ''
 
 if cli_prompt:
     if args['open']:
@@ -75,6 +77,10 @@ while True:
             # https://stackoverflow.com/a/4217032
             webbrowser.open(f'https://claude.ai/chat/{uuid}', new = 0, autoraise = True)
             break
+
+        elif command in ['cp', 'copy']:
+            copy_to_clipboard(response)
+            continue
 
         else:
             pass
