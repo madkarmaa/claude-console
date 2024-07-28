@@ -17,7 +17,7 @@ cd claude-console
 pip install -r requirements.txt
 ```
 
-> [!TIP]
+> [!NOTE]
 >
 > The command (`claude_console`) installation is not required but recommended. You can run the installation script like so:
 >
@@ -54,7 +54,7 @@ pip install -r requirements.txt
 ### 📢 Single response
 
 ```
-claude_console <prompt>
+claude_console "<prompt>" <OPTIONS>
 ```
 
 After the command is executed, the history of the response **cannot** be accessed by the AI anymore.
