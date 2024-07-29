@@ -2,7 +2,7 @@ import sys
 import webbrowser
 from argparse import ArgumentParser
 from lib.client import Client
-from lib.utils import check_for_updates
+from lib.utils import check_for_updates, get_command
 from colorama import Fore, Style
 from pyperclip import copy as copy_to_clipboard
 # https://stackoverflow.com/a/76833666
@@ -12,9 +12,6 @@ from rich.markdown import Markdown
 check_for_updates()
 
 COMMAND_PREFIX = '!'
-
-def get_command(input_string: str) -> str:
-    return input_string.split(' ')[0][len(COMMAND_PREFIX):]
 
 parser = ArgumentParser()
 console = Console()
@@ -71,7 +68,7 @@ while True:
 
     # execute commands
     if prompt.startswith(COMMAND_PREFIX):
-        command = get_command(prompt)
+        command = get_command(prompt, COMMAND_PREFIX)
 
         if command in ['quit', 'q', 'exit']:
             break

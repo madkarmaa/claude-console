@@ -128,3 +128,6 @@ def check_for_updates() -> None:
 
     print(f'{Fore.GREEN}Update completed! Exiting to apply changes...{Style.RESET_ALL}')
     sys.exit(0)
+
+def get_command(input_string: str, prefix: str) -> str:
+    return input_string.split(' ')[0][len(prefix):]
